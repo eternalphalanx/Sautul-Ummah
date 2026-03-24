@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EP Wifi Zone</title>
+<title>Sautul Ummah</title>
 
 <style>
 
-/* ===== BODY BACKGROUND ===== */
-
+/* ===== BODY BACKGROUND (UNCHANGED) ===== */
 body{
 margin:0;
 height:100vh;
@@ -25,206 +24,122 @@ background:linear-gradient(
 );
 }
 
-/* ===== MAIN WRAPPER ===== */
+/* ===== MAIN 3D CARD ===== */
+.container{
+width:360px;
+padding:25px;
+border-radius:25px;
 
-.wrapper{
-width:350px;
-padding:18px;
-border-radius:22px;
-background:rgba(255,255,255,0.15);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 25px 50px rgba(0,0,0,0.25),
+inset 0 1px 1px rgba(255,255,255,0.2);
+
+transform:perspective(1000px) rotateX(5deg) rotateY(-5deg);
+transition:0.4s;
 }
 
-/* ===== ICON ===== */
-
-.icon-box{
-width:80px;
-height:80px;
-margin:auto;
-margin-top:-50px;
-margin-bottom:10px;
-border-radius:18px;
-background:#E8EDFF;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 10px 20px rgba(0,0,0,0.15);
-font-weight:bold;
-color:#5B6BEF;
+.container:hover{
+transform:perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.02);
 }
 
-/* ===== TITLE ===== */
-
-.title{
+/* ===== LOGO / TITLE ===== */
+.logo{
 text-align:center;
+margin-bottom:15px;
 }
 
-.title h3{
-margin:10px 0 4px;
-color:#1F2937;
+.logo h1{
+margin:0;
+font-size:28px;
+font-weight:700;
+
+background:linear-gradient(135deg,#ffffff,#dbeafe);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-.title p{
-margin:0 0 15px;
+.logo p{
+margin-top:6px;
 font-size:13px;
-color:#6B7280;
+color:#f1f5f9;
 }
 
-/* ===== LOGIN CARD ===== */
-
-.login-card{
-background:#DDE6F8;
-padding:16px;
+/* ===== 3D BOX ===== */
+.card{
+padding:18px;
 border-radius:18px;
-box-shadow:0 10px 25px rgba(50,60,120,0.15);
-}
 
-/* ===== TABS ===== */
+background:rgba(255,255,255,0.25);
 
-.tabs{
-display:flex;
-gap:10px;
-margin-bottom:12px;
-}
-
-.tab{
-flex:1;
-padding:8px;
-border-radius:12px;
-border:none;
-font-size:13px;
-cursor:pointer;
-}
-
-.tab.active{
-background:linear-gradient(135deg,#5B6BEF,#4A5CE0);
-color:white;
-}
-
-.tab.secondary{
-background:#ffffff;
-box-shadow:0 4px 8px rgba(0,0,0,0.08);
-}
-
-/* ===== INPUT ===== */
-
-label{
-font-size:12px;
-color:#374151;
-}
-
-input{
-width:100%;
-margin-top:4px;
-margin-bottom:10px;
-padding:10px;
-border-radius:10px;
-border:none;
-background:#EDEFF3;
+box-shadow:
+inset 0 2px 5px rgba(255,255,255,0.5),
+0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* ===== BUTTON ===== */
-
-.primary-btn{
+.btn{
+margin-top:15px;
 width:100%;
 padding:12px;
 border:none;
 border-radius:14px;
-color:white;
+
 font-weight:600;
+color:white;
 cursor:pointer;
+
 background:linear-gradient(135deg,#5B6BEF,#4A5CE0);
-box-shadow:0 8px 15px rgba(75,85,200,0.35);
+
+box-shadow:
+0 10px 20px rgba(75,85,200,0.4),
+inset 0 1px 2px rgba(255,255,255,0.4);
+
+transition:0.3s;
 }
 
-.primary-btn:hover{
-transform:translateY(-1px);
+.btn:hover{
+transform:translateY(-2px);
+box-shadow:
+0 15px 25px rgba(75,85,200,0.5);
 }
 
-/* ===== PAYMENT ===== */
-
-.payment{
-margin-top:15px;
-}
-
-/* ===== CONTACT CARD ===== */
-
-.contact{
-margin-top:15px;
-padding:14px;
-border-radius:15px;
-background:rgba(255,255,255,0.35);
-}
-
-.contact-buttons{
-display:flex;
-gap:10px;
-margin-top:10px;
-}
-
-.small-btn{
-flex:1;
-padding:8px;
-border-radius:10px;
-border:none;
-background:#ffffff;
-box-shadow:0 4px 8px rgba(0,0,0,0.08);
-cursor:pointer;
-}
-
-.footer{
+/* ===== INFO TEXT ===== */
+.info{
 margin-top:12px;
+font-size:13px;
 text-align:center;
-font-size:12px;
-color:#6B7280;
+color:#e5e7eb;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-<div class="icon-box">EP</div>
-
-<div class="title">
-<h3>Welcome to EP Wifi Zone</h3>
-<p>Choose your access method to get online quickly and securely.</p>
+<div class="logo">
+<h1>Sautul Ummah</h1>
+<p>Voice of Unity • Strength • Truth</p>
 </div>
 
-<div class="login-card">
+<div class="card">
+<p style="text-align:center; font-size:14px; color:#1f2937;">
+Empowering the Ummah with knowledge, unity, and strength.
+Stay connected and be part of something meaningful.
+</p>
 
-<div class="tabs">
-<button class="tab active">Local User Login</button>
-<button class="tab secondary">Voucher Login</button>
+<button class="btn">Join Now</button>
 </div>
 
-<label>Username</label>
-<input placeholder="Enter your username">
-
-<label>Password</label>
-<input type="password" placeholder="Enter your password">
-
-<button class="primary-btn">Connect</button>
-
-</div>
-
-<button class="primary-btn payment">Payment Now</button>
-
-<div class="contact">
-<strong>Contact us</strong>
-
-<div class="contact-buttons">
-<button class="small-btn">📞 Call</button>
-<button class="small-btn">💬 WhatsApp</button>
-</div>
-
-</div>
-
-<div class="footer">
-Need help? Ask our desk team for assistance at any time.
+<div class="info">
+A platform for growth, awareness, and unity.
 </div>
 
 </div>
